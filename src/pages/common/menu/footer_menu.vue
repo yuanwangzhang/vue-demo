@@ -4,14 +4,14 @@
 
 <style>
 body {
-  background-color: #ffffff;
+  background-color: #aeff38;
 }
 </style>
 
 <script>
 export default {
   data() {
-    return {msg: "这是一个权限配置界面"}
+    return { msg: "lance design Get help from Boss.Liang" };
   }
 };
 </script>

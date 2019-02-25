@@ -7,7 +7,7 @@ import axios from 'axios';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import "babel-polyfill";
-import {validate} from '../static/js/common/validate/validate.js' // 引入自定义的检验js
+import { validate } from '../static/js/common/validate/validate.js' // 引入自定义的检验js,引入单个文件使用{}
 
 Vue.use(ElementUI);
 
@@ -16,8 +16,9 @@ Vue.prototype.$validater = validate;
 
 
 axios.defaults.timeout = 60000;
-axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';// 配置请求头
-axios.defaults.baseURL = 'http://localhost:8090/httpDataApi';// 配置接口地址
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded;charset=UTF-8';
+// 配置接口地址
+axios.defaults.baseURL = 'http://localhost:8090/httpDataApi';
 axios.defaults.withCredentials = true;
 Vue.prototype.$axios = axios;
 
@@ -25,6 +26,6 @@ Vue.prototype.$axios = axios;
 new Vue({
   el: '#app',
   router,
-  components: {App},
+  components: { App },
   template: '<App/>'
 });
